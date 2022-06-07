@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Tenes</title>
+  </head>
+  <body>
+    <header>
+      <div class="container_header">
+        <div class="logo">
+          <img src="./img/logo.png" alt="logo" />
+        </div>
+        <div class="buscar">
+          <input type="text" placeholder="pesquisar ..." />
+          <span class="lupa">
+            <a hrfe="#"><img src="./img/lupaPesquisa.png" /></a>
+          </span>
+        </div>
+        <div class="icones">
+          <img class="img_perfil" src="./img/perfil.png" alt="perfil usuario" />
+          <div class="perfil">
+            <div class="seta_perfil"></div>
+            <button id="btn_entrar">Entrar</button>
+
+            <button id="btn_cadastro">Cadastro</button>
+          </div>
+          <div class="modal_entrar">
+            <img src="./img/logo.png" />
+            <input type="text" placeholder="Email..." />
+            <input type="password" placeholder="Senha..." />
+            <button id="btn_modal_entrar">Entrar</button>
+            <button id="btn_modal_cadastro">Cadastro</button>
+          </div>
+          <div class="modal_cadastro">
+            <img src="./img/logo.png" />
+            <input type="text" placeholder="Nome..." />
+            <input type="text" placeholder="Email..." />
+            <input type="password" placeholder="Senha..." />
+            <button id="btn_modal_cd">Cadastro</button>
+          </div>
+          <img src="./img/loja.png" alt=" cesta" />
+          <img src="./img/cesta.png" alt="loja" id="carrinho" />
+          <div class="carrinho">
+            <div class="seta_carrinho"></div>
+            <span></span>
+            <table>
+              <tr>
+                <th>Nome do produto</th>
+                <th>Preço</th>
+              </tr>
+              <tr>
+                <td>Nike shox</td>
+                <td>R$ 1.234,99</td>
+              </tr>
+              <tr>
+                <td>Nike shox</td>
+                <td>R$ 1.234,99</td>
+              </tr>
+              <tr>
+                <td>Nike shox</td>
+                <td>R$ 1.234,99</td>
+              </tr>
+              <tr>
+                <td>Nike shox</td>
+                <td>R$ 1.234,99</td>
+              </tr>
+            </table>
+            <h3>Total</h3>
+            <button id="btn_finalizar_carrinho">Finalizar</button>
+          </div>
+          <div class="filtro_carrinho"></div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav_principal_desk">
+        <a href=""
+          ><li>
+            <img class="img_menu" src="./img/icons8-cardápio-48.png" alt="" />
+            <div class="sub_menu">
+              <div class="seta"></div>
+              <ul>
+                <a href="#"><li>Masculino</li></a>
+                <a href="#"><li>Feminino</li></a>
+                <a href="#"><li>Lançamento</li></a>
+                <a href="#"><li>Infantil</li></a>
+                <a href="#"><li>Produtos</li></a>
+                <a href="#"><li>Promoção</li></a>
+              </ul>
+              <div class="sub_menu_img">
+                <img src="./img/logo.png" />
+                <img src="./img/icons8-sapato-feminino-100.png" />
+                <img src="./img/icons8-sapato-masculino-100.png" />
+                <img src="./img/icons8-womans-boot-96.png" />
+              </div>
+            </div></li
+        ></a>
+        <a href="#"><li>Masculino</li></a>
+        <a href="#"><li>Feminino</li></a>
+        <a href="#"><li>Lançamento</li></a>
+        <a href="#"><li>Infantil</li></a>
+        <a href="#"><li>Produtos</li></a>
+        <a href="#"><li id="promocao">Promoção</li></a>
+      </ul>
+    </nav>
+    <main>
+      <div class="banner">
+        <div class="texto">
+          <span>Rappo</span>
+        </div>
+      </div>
+
+      <div class="vitrine_produto">
+          <div class="vitrine_mini_foto">
+              <ul>
+                  <li><a href><img src="./img/icons8-sapato-feminino-100.png"></a></li>
+                  <li><a href><img src="./img/icons8-sapato-masculino-100.png"></a></li>
+                  <li><a href><img src="./img/icons8-sapato-feminino-100.png"></a></li>
+                  <li><a href><img src="./img/logo.png"></a></li>
+              </ul>
+          </div>
+          <div class="vitrine_foto">
+              <div class="container_foto"></div>
+          </div>
+          <div class="vitrine_informacao"></div>
+          <div class="vitrine_anuncio"></div>
+      </div>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-container">
+              <img src="./img/imani-bahati-LxVxPA1LOVM-unsplash.jpg" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-container">
+              <img src="./img/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-container">
+              <img src="./img/maksim-larin-ezdrvzA1hZw-unsplash.jpg" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-container">
+              <img src="./img/Nike sem nome.jpg" />
+            </div>
+          </div>
+          <div class="swiper-slide">Resize me5!</div>
+          <div class="swiper-slide">Resize me6!</div>
+          <div class="swiper-slide">Resize me7!</div>
+          <div class="swiper-slide">Resize me8!</div>
+          <div class="swiper-slide">Resize me9!</div>
+          <div class="swiper-slide">Resize me10!</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="newsllater">
+        <div class="texto_newsllater">
+          <h2>
+            Quer receber mais <span class="cor_news">novidades</span>,
+            <span class="cor_news">lançamento</span> e
+            <span class="cor_news">promoções?</span>
+          </h2>
+          <p>
+            Inscreva-se para receber nossos conteúdos por email e participe da
+            maior loja!
+          </p>
+        </div>
+        <div class="input_newsllater">
+          <input type="text" placeholder="Email..." />
+          <p>
+            Insira seu email e receba todas as novidades da nossa loja, assim o
+            manteremos sempre atualizado sobre novos produtos
+          </p>
+          <button>Enviar</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_text">
+        <p>Parcerias</p>
+        <span>Seja nosso parceiro</span>
+        <p>Institucional</p>
+        <span>quem somos nossas lojas rappo</span>
+        <p>Compre pelo telefone</p>
+        <h2>0800 987 5265</h2>
+      </div>
+      <div class="icone_pagamento">
+        <img src="./img/icons8-visa-96.png" />
+        <img src="./img/icons8-boleto-bankario-96.png" />
+        <img src="./img/icons8-mastercard-96.png" />
+      </div>
+      <div class="mapa_loja">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25777.814877631892!2d-115.296657671621!3d36.13668922577811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c14288ded58b%3A0xff8a584d42ba7979!2sThe%20Lakes%2C%20Las%20Vegas%2C%20NV%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1654297444281!5m2!1spt-BR!2sbr"
+          width="600"
+          height="250"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>copyright</p>
+    </div>
+    <div class="filtro"></div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
