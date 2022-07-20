@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <title>Tenes</title>
+    <title>Rappo - Calçados</title>
   </head>
   <body>
     <header>
@@ -20,60 +20,52 @@
         <div class="buscar">
           <input type="text" placeholder="pesquisar ..." />
           <span class="lupa">
-            <a hrfe="#"><img src="./img/lupaPesquisa.png" /></a>
+            <a href="#"><img src="./img/lupaPesquisa.png" /></a>
           </span>
         </div>
         <div class="icones">
           <img class="img_perfil" src="./img/perfil.png" alt="perfil usuario" />
           <div class="perfil">
             <div class="seta_perfil"></div>
-            <button id="btn_entrar">Entrar</button>
-
-            <button id="btn_cadastro">Cadastro</button>
+            <button id="btn_entrar" onclick="entrar()">Entrar</button>
+            <button id="btn_cadastro" onclick="cadastro()">Cadastro</button>
           </div>
           <div class="modal_entrar">
-            <img src="./img/logo.png" />
-            <input type="text" placeholder="Email..." />
-            <input type="password" placeholder="Senha..." />
-            <button id="btn_modal_entrar">Entrar</button>
+            <img src="./img/logo.png" alt="imagem logo" />
+            <input type="text" placeholder="Email..." id="emailEntra" />
+            <input type="password" placeholder="Senha..." id="senhaEntra" />
+            <button id="btn_modal_entrar" onclick="validaEntra()">
+              Entrar
+            </button>
             <button id="btn_modal_cadastro">Cadastro</button>
           </div>
           <div class="modal_cadastro">
-            <img src="./img/logo.png" />
-            <input type="text" placeholder="Nome..." />
-            <input type="text" placeholder="Email..." />
-            <input type="password" placeholder="Senha..." />
+            <img src="./img/logo.png" alt="imagem logo" />
+            <input type="text" placeholder="Nome..." id="nomeCadastro" />
+            <input type="text" placeholder="Email..." id="emailCadastro" />
+            <input type="password" placeholder="Senha..." id="senhaCadastro" />
             <button id="btn_modal_cd">Cadastro</button>
           </div>
-          <img src="./img/loja.png" alt=" cesta" />
-          <img src="./img/cesta.png" alt="loja" id="carrinho" />
+          <img src="./img/loja.png" alt="icone cesta" class="teste" />
+          <img src="./img/cesta.png" alt="icone loja" id="carrinho" />
+          <span class="qntdCarrinho">
+            <p>0</p>
+          </span>
           <div class="carrinho">
             <div class="seta_carrinho"></div>
             <span></span>
-            <table>
+            <table class="table">
               <tr>
                 <th>Nome do produto</th>
                 <th>Preço</th>
               </tr>
-              <tr>
-                <td>Nike shox</td>
-                <td>R$ 1.234,99</td>
-              </tr>
-              <tr>
-                <td>Nike shox</td>
-                <td>R$ 1.234,99</td>
-              </tr>
-              <tr>
-                <td>Nike shox</td>
-                <td>R$ 1.234,99</td>
-              </tr>
-              <tr>
-                <td>Nike shox</td>
-                <td>R$ 1.234,99</td>
-              </tr>
             </table>
             <h3>Total</h3>
-            <button id="btn_finalizar_carrinho">Finalizar</button>
+            <span class="totalProduto">R$ 00</span>
+            <button id="btn_finalizar_carrinho" onclick="finalizarPedido()">
+              Fechar pedido
+            </button>
+            <button id="btn_ctn">Continuar comprando</button>
           </div>
           <div class="filtro_carrinho"></div>
         </div>
@@ -81,35 +73,47 @@
     </header>
     <nav>
       <ul class="nav_principal_desk">
-        <a href=""
+        <a href="#"
           ><li>
-            <img class="img_menu" src="./img/icons8-cardápio-48.png" alt="" />
+            <img
+              class="img_menu"
+              src="./img/icons8-cardápio-48.png"
+              alt="icone"
+            />
             <div class="sub_menu">
               <div class="seta"></div>
               <ul>
                 <a href="#"><li>Masculino</li></a>
                 <a href="#"><li>Feminino</li></a>
                 <a href="#"><li>Lançamento</li></a>
-                <a href="#"><li>Infantil</li></a>
-                <a href="#"><li>Produtos</li></a>
+                <a href="#" id="es-menu"><li>Infantil</li></a>
+                <a href="#" id="es-menu"><li>Produtos</li></a>
                 <a href="#"><li>Promoção</li></a>
               </ul>
               <div class="sub_menu_img">
-                <img src="./img/logo.png" />
-                <img src="./img/icons8-sapato-feminino-100.png" />
-                <img src="./img/icons8-sapato-masculino-100.png" />
-                <img src="./img/icons8-womans-boot-96.png" />
+                <img src="./img/logo.png" alt="logo" />
+                <img
+                  src="./img/icons8-sapato-feminino-100.png"
+                  alt="Icone sapato feminino"
+                />
+                <img
+                  src="./img/icons8-sapato-masculino-100.png"
+                  alt="Icone sapato masculino"
+                />
+                <img src="./img/icons8-womans-boot-96.png" alt="Icone womans" />
               </div>
-            </div></li
-        ></a>
-        <a href="#"><li>Masculino</li></a>
-        <a href="#"><li>Feminino</li></a>
-        <a href="#"><li>Lançamento</li></a>
-        <a href="#"><li>Infantil</li></a>
-        <a href="#"><li>Produtos</li></a>
-        <a href="#"><li id="promocao">Promoção</li></a>
+            </div>
+          </li>
+        </a>
+        <a class="icone_menu_none" href="#"><li>Masculino</li></a>
+        <a class="icone_menu_none" href="#"><li>Feminino</li></a>
+        <a class="icone_menu_none" href="#"><li>Lançamento</li></a>
+        <a class="icone_menu_none" href="#"><li>Infantil</li></a>
+        <a class="icone_menu_none" href="#"><li>Produtos</li></a>
+        <a class="icone_menu_none" href="#"><li id="promocao">Promoção</li></a>
       </ul>
     </nav>
+
     <main>
       <div class="banner">
         <div class="texto">
@@ -117,8 +121,11 @@
         </div>
       </div>
       <div class="container_conteudo">
-        <div class="produtos">
-          <img src="./img/Nike sem nome.jpg" alt="" />
+        <div class="produtos" id="prod-01">
+          <img src="./img/Nike sem nome.jpg" alt="Foto nike" /><span
+            class="btn_comprar"
+            >Comprar</span
+          >
           <h4>Titulo do produto</h4>
           <div class="container_avaliacao">
             <ul>
@@ -126,12 +133,14 @@
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
             </ul>
@@ -139,8 +148,11 @@
           <h3>R$ 1.000,00</h3>
           <p>7x de R$ 142,85 sem juros no cartão</p>
         </div>
-        <div class="produtos">
-          <img src="./img/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="" />
+        <div class="produtos" id="prod-02">
+          <img
+            src="./img/imani-bahati-LxVxPA1LOVM-unsplash.jpg"
+            alt="icone"
+          /><span class="btn_comprar">Comprar</span>
           <h4>Titulo do produto</h4>
           <div class="container_avaliacao">
             <ul>
@@ -148,6 +160,7 @@
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icons estrela"
                 />
               </li>
             </ul>
@@ -155,8 +168,9 @@
           <h3>R$ 1.189,00</h3>
           <p>7x de R$ 169,85 sem juros no cartão</p>
         </div>
-        <div class="produtos">
+        <div class="produtos" id="prod-03">
           <img src="./img/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="" />
+          <span class="btn_comprar">Comprar</span>
           <h4>Titulo do produto</h4>
           <div class="container_avaliacao">
             <ul>
@@ -164,27 +178,34 @@
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
             </ul>
           </div>
-          <h3>R$ 480,99</h3>
+          <h3>R$ 480,00</h3>
           <p>7x de R$ 68,57 sem juros no cartão</p>
         </div>
-        <div class="produtos">
-          <img src="./img/maksim-larin-ezdrvzA1hZw-unsplash.jpg" alt="" />
+        <div class="produtos" id="prod-04">
+          <img
+            src="./img/maksim-larin-ezdrvzA1hZw-unsplash.jpg"
+            alt="foto produto"
+          />
+          <span class="btn_comprar">Comprar</span>
           <h4>Titulo do produto</h4>
           <div class="container_avaliacao">
             <ul>
@@ -192,24 +213,28 @@
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
               <li>
                 <img
                   id="estrelaAva"
                   src="./img/icons8-estrela-preenchida-64.png"
+                  alt="icone estrela"
                 />
               </li>
             </ul>
@@ -222,22 +247,31 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="swiper-container">
-              <img src="./img/imani-bahati-LxVxPA1LOVM-unsplash.jpg" />
+              <img
+                src="./img/imani-bahati-LxVxPA1LOVM-unsplash.jpg"
+                alt="Foto slide"
+              />
             </div>
           </div>
           <div class="swiper-slide">
             <div class="swiper-container">
-              <img src="./img/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" />
+              <img
+                src="./img/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg"
+                alt="Foto slide"
+              />
             </div>
           </div>
           <div class="swiper-slide">
             <div class="swiper-container">
-              <img src="./img/maksim-larin-ezdrvzA1hZw-unsplash.jpg" />
+              <img
+                src="./img/maksim-larin-ezdrvzA1hZw-unsplash.jpg"
+                alt="Foto slide"
+              />
             </div>
           </div>
           <div class="swiper-slide">
             <div class="swiper-container">
-              <img src="./img/Nike sem nome.jpg" />
+              <img src="./img/Nike sem nome.jpg" alt="Foto slide" />
             </div>
           </div>
           <div class="swiper-slide">Resize me5!</div>
@@ -264,11 +298,34 @@
         </div>
         <div class="input_newsllater">
           <input type="text" placeholder="Email..." />
-          <p>
+          <p class="new-mobile">
             Insira seu email e receba todas as novidades da nossa loja, assim o
             manteremos sempre atualizado sobre novos produtos
           </p>
           <button>Enviar</button>
+        </div>
+      </div>
+      <div class="container_modal">
+        <div class="modal">
+          <h2>cupom - 15% de desconto</h2>
+          <img src="./img/icons8-x-48 (2).png" class="icone_volta" />
+          <div class="modal_flex">
+            <div class="modal-img">
+              <img src="./img/DESCONTO.png" />
+            </div>
+            <div class="modal-text">
+              <h3>Inscreva-se na newsletter e ganhe cupom 15% de desconto</h3>
+              <p>
+                inscreva-se para ser o primeiro a saber sobre ofertas
+                exclusivas, ofertas especiais e próximas coleções
+              </p>
+              <input type="text" placeholder="E-mail..." />
+              <button>Inscrever</button>
+              <input type="checkbox" /><span
+                >Aceito a <a href="#">política e privacidade</a></span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </main>

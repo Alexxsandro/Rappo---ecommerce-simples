@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/pagamento.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="continuar_comprando">
+            <a href="/index.html">continuar comprando</a>
+        </div>
+        <div class="logo">
+            <img src="./img/logo.png" alt="imagem logo - Rappo">
+        </div>
+    </header>
+    <main>
+        <div class="container_icone">
+            <ul>
+                <li class="ativoCarrinho"><img src="./img/icons8-paper-bag-96.png" alt="icone carrinho"></li>
+                <li><img src="./img/icons8-usuário-de-gênero-neutro-96.png" alt="icone perfil"></li>
+                <li><img src="./img/icons8-fatura-96.png" icone="icone pagamento"></li>
+            </ul>
+        </div>
+        <div class="produto">
+            <table class="table">
+                
+            </table>
+            <div class="totalProduto">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td class="subProd">R$ 71,96</td>
+                    </tr>
+                    <tr>
+                        <td>Entrega</td>
+                        <td><a href="#">Calcular</a></td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th class="totalProd">R$ 71,96</th>
+                    </tr>
+                </table>
+                <button id="btn_pg_fechar" onclick="finalizandoCarrinho()">Fechar pedido</button>
+            </div>
+        </div>
+        <div class="entrega">
+            <h3>Entrega</h3>
+            <p>Veja as opções de entrega para seus itens, com todos os prazos e valores</p>
+            <input type="text" placeholder="Cep..." id="cep">
+            <button onclick="submitCep()">Calcular</button>
+            <div class="resultCep">
+                <input type="radio" id="endereco1" name="endereco1" value="endereco1">
+                <span>Frete Grátis - <strong>10 dias</strong></span><br>
+                <input type="radio" id="endereco2" name="endereco1" value="endereco2">
+                <span>Express - Rappo - <strong>5 dias</strong></span></br>
+                <i><span class="endereco_1"></i></span></br>
+                
+            </div>
+            <div class="cupom">
+                 <h3>Cupom de desconto</h3>
+                 <input type="text" placeholder="RAPPO2022" id="cupomDesconto">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copy">
+            <p>Todos os diretos reservados copyright @</p>
+        </div>
+    </footer>
+    <script src="./js/pagamento.js"></script>
+</body>
+</html>
