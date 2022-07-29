@@ -1,6 +1,10 @@
-# Rappo---ecommerce-simples
+# Página de ecommerce Rappo
 
-:computer: HTML,CSS,JS
+
+:hammer_and_wrench: Ferramnetas utilizadas HTML,CSS,JS
+
+
+:computer: Foi desenvolvido um sistema simples, com algumas validações, usuário consegue adicionar produto no carrinho e remover, também foi desenvolvido um sistema de carrinho onde utilizamos o localstorage para armazenar e navegar com os produtos da página home para página do carrinho, utilizamos uma Api externa para informa o endereço do usuário
 
 
 ![home](https://user-images.githubusercontent.com/80698066/180048739-8ed0dbff-4076-4608-8c7d-473c83e5001c.png)
